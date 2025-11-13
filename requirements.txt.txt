@@ -1,9 +1,7 @@
 streamlit==1.39.0
-torch
-ultralytics
+torch==2.0.1
+ultralytics==8.0.147
+opencv-python==4.7.0.72
 Pillow
-opencv-python-headless
 numpy
 protobuf==3.20.3
-requests
-PyYAML
