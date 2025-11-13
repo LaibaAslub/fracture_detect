@@ -1,9 +1,0 @@
-streamlit==1.39.0
-torch
-ultralytics
-Pillow
-opencv-python-headless
-numpy
-protobuf==3.20.3
-requests
-PyYAML
