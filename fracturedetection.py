@@ -8,7 +8,7 @@ import os
 # PAGE CONFIGURATION
 # -------------------------------
 st.set_page_config(
-    page_title=" Hand Fracture Detector",
+    page_title="Hand Fracture Detector",
     page_icon="🩻",
     layout="wide"
 )
@@ -53,20 +53,12 @@ st.markdown("""
 # -------------------------------
 # APP HEADER
 # -------------------------------
-st.title(" AI-Powered Hand Fracture Detection")
+st.title("🩻 AI-Powered Hand Fracture Detection")
 st.markdown(
     "<p style='text-align:center;'>Upload an X-ray image of a hand, and our YOLO model will highlight fracture areas.</p>",
     unsafe_allow_html=True,
 )
 st.markdown("---")
-
-# # -------------------------------
-# # SIDEBAR SETTINGS
-# # -------------------------------
-# st.sidebar.header("⚙️ Settings")
-# confidence_threshold = st.sidebar.slider("Confidence Threshold", 0.1, 1.0, 0.25, 0.05)
-# st.sidebar.info("Adjust the confidence threshold to control detection sensitivity.")
-# st.sidebar.markdown("---")
 
 # -------------------------------
 # LOAD MODEL
@@ -77,6 +69,9 @@ def load_model():
     return model
 
 model = load_model()
+
+# Fixed confidence threshold
+CONFIDENCE_THRESHOLD = 0.25  # Default 25%
 
 # -------------------------------
 # IMAGE UPLOAD
@@ -97,13 +92,13 @@ if uploaded_file is not None:
             image.save(tmp.name)
             temp_path = tmp.name
 
-        results = model.predict(temp_path, conf=confidence_threshold)
+        results = model.predict(temp_path, conf=CONFIDENCE_THRESHOLD)
         annotated_img = results[0].plot()
 
         # Show result image
         with col2:
             st.image(annotated_img, caption="✅ Detection Result", use_container_width=True)
-            # Detection details
+
         st.markdown("---")
         st.subheader("📊 Detection Summary")
 
