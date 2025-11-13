@@ -60,13 +60,13 @@ st.markdown(
 )
 st.markdown("---")
 
-# -------------------------------
-# SIDEBAR SETTINGS
-# -------------------------------
-st.sidebar.header("⚙️ Settings")
-confidence_threshold = st.sidebar.slider("Confidence Threshold", 0.1, 1.0, 0.25, 0.05)
-st.sidebar.info("Adjust the confidence threshold to control detection sensitivity.")
-st.sidebar.markdown("---")
+# # -------------------------------
+# # SIDEBAR SETTINGS
+# # -------------------------------
+# st.sidebar.header("⚙️ Settings")
+# confidence_threshold = st.sidebar.slider("Confidence Threshold", 0.1, 1.0, 0.25, 0.05)
+# st.sidebar.info("Adjust the confidence threshold to control detection sensitivity.")
+# st.sidebar.markdown("---")
 
 # -------------------------------
 # LOAD MODEL
