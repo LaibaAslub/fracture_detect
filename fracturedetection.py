@@ -53,7 +53,7 @@ st.markdown("""
 # -------------------------------
 # APP HEADER
 # -------------------------------
-st.title("🩻 AI-Powered Hand Fracture Detection")
+st.title(" AI-Powered Hand Fracture Detection")
 st.markdown(
     "<p style='text-align:center;'>Upload an X-ray image of a hand, and our YOLO model will highlight fracture areas.</p>",
     unsafe_allow_html=True,
