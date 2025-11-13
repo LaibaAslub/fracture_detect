@@ -84,7 +84,7 @@ if uploaded_file is not None:
     # Show uploaded image
     with col1:
         image = Image.open(uploaded_file)
-        st.image(image, caption="🩻 Uploaded X-ray", use_container_width=True)
+        st.image(image, caption=" Uploaded X-ray", use_container_width=True)
 
     # Predict with model
     with st.spinner("🔍 Detecting fractures... Please wait."):
